@@ -1,0 +1,28 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/index/index",
+    "pages/add/add",
+    "pages/user/user"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    },{
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    },{
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    },{
+      "pagePath": "pages/user/user",
+      "text": "我的"
+    }]
+  }
+}

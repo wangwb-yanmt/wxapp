@@ -1,0 +1,36 @@
+<!-- 用户头像和昵称 -->
+<view class="panel">
+  <view class="panel-row">
+    <image class="roundIcon" src="{{userInfo.avatarUrl}}"></image>
+    <text class="font-large-bold">{{userInfo.nickName}}</text>
+  </view>
+</view>
+<view class="panel">
+  <view class="panel-row-justify">
+    <view class="flex-column">
+      <image class="roundIcon" src="/images/下载.jpg"></image>
+      <text class="font-small">在线申请    </text>
+    </view>
+    <view class="flex-column">
+      <image class="roundIcon" src="/images/下载.jpg"></image>
+      <text class="font-small">整改反馈       </text>
+    </view>
+    <view class="flex-column">
+      <image class="roundIcon" src="/images/下载.jpg"></image>
+      <text class="font-small">许可备案品种登记</text>
+    </view>
+  </view>
+</view>
+
+<view class="panel">
+  <view class="panel-row">
+    <button bindtap="xinban">新办</button>
+  </view>
+</view>
+<!-- <view class="panel" wx:for="{{array}}">
+  <view class="panel-row">
+    {{index+1}}：{{item.CORP_NAME}}
+  </view>
+</view> -->
+
+

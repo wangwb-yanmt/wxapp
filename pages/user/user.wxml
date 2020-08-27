@@ -1,0 +1,14 @@
+<view class="flex-column">
+  <view class="panel">
+    <image class="sysIcon" src="{{userInfo.avatarUrl}}"></image>
+    <view>{{userInfo.nickName}}</view>
+  </view>
+  <view class="panel">
+    <view class="panel-row">
+      <view class="panel-row-left title">标题</view>
+      <view class="panel-row-right font-small">更多</view>
+    </view>
+  </view>
+</view>
+
+

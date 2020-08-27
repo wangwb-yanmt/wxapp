@@ -1,0 +1,8 @@
+<view class="flex-column">
+  <image class="sysIcon" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3742593064,1118750958&fm=26&gp=0.jpg"></image>
+  <text class="sysTitle">化妆品监管（盐城）</text>
+  <view class="loginButtonView flex-column">
+    <button class="loginButton" open-type="getUserInfo" bindgetuserinfo="getUser">微信一键登录</button>
+    <button class="loginButton" open-type="getPhoneNumber" bindgetphonenumber="getPhone">手机号码登录</button>
+  </view>
+</view>

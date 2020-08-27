@@ -1,0 +1,60 @@
+<view class="panel">
+  <view class=" text-center font-bold" id="titleRow">企业基本信息</view>
+  <!-- 绑定表单提交和重置事件 -->
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <!-- 此处动态设置滚动区域高度 -->
+    <scroll-view scroll-y="true" style="height:{{scrollViewHeight}}px">
+      <view class="panel-row"><text>企业名称</text></view>
+      <view class="panel-row">
+        <input placeholder="请输入企业名称" name="corpName" class="border-bottom"></input>
+      </view>
+      <view class="panel-row"><text>法定代表人</text></view>
+      <view class="panel-row">
+        <input placeholder="请输入法定代表人" name="operMan" class="border-bottom"></input>
+      </view>
+      <view class="panel-row"><text>统一社会信用代码</text></view>
+      <view class="panel-row">
+        <input placeholder="请输入统一社会信用代码" name="regNo" class="border-bottom"></input>
+      </view>
+      <view class="panel-row"><text>经营范围</text></view>
+      <view class="panel-row">
+        <input placeholder="请输入经营范围" name="regNo" class="border-bottom"></input>
+      </view>
+      <view class="panel-row"><text>许可经营范围</text></view>
+      <view class="panel-row">
+        <input placeholder="请输入许可经营范围" name="regNo" class="border-bottom"></input>
+      </view>
+      <view class="panel-row"><text>登记机关</text></view>
+      <view class="panel-row">
+        <input placeholder="请输入登记机关" name="regNo" class="border-bottom"></input>
+      </view>
+      <view class="panel-row"><text>企业状态</text></view>
+      <view class="panel-row">
+        <picker class="border-bottom" bindchange="bindPickerChange" value="{{corpStatusArray[index].id}}" range="{{corpStatusArray}}" range-key="text" name="city">
+          当前选择：{{corpStatusArray[index].text}}
+        </picker>
+      </view>
+      <view class="panel-row"><text>主营项目类别</text></view>
+      <view class="panel-row">
+        <input placeholder="请输入主营项目类别" name="regNo" class="border-bottom"></input>
+      </view>
+      <view class="panel-row-justify">
+        <text>营业执照信息</text>
+        <text bindtap="chooseFile">选择文件</text>
+      </view>
+      <view class="panel-row">
+        <block wx:for="{{files}}">
+          <view class="flex-column">
+            <!-- <image class="roundIcon" src="{{item.filePath}}"></image> -->
+            <text class="font-small">{{item.fileName}}</text>
+            <image class="del-icon" src="/images/删除图标.png" bindtap="deleteFile" data-filename="{{item.fileName}}"></image>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+    <view class="panel-row shadow-top fixed-bottom" id="buttonRow">
+      <button form-type="reset">重置</button>
+      <button form-type="submit" class="myButton">提交</button>
+    </view>
+  </form>
+</view>
